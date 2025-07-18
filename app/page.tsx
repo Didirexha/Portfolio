@@ -141,6 +141,29 @@ export default function Portfolio() {
     },
   ]
 
+  // Add state for contact form
+  const [contact, setContact] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+
+  // Handle input changes
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setContact({ ...contact, [e.target.name]: e.target.value })
+  }
+
+  // Handle form submit
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const phone = "38348222209" // WhatsApp number without + or spaces
+    const text = `Name: ${contact.firstName} ${contact.lastName}%0AEmail: ${contact.email}%0ASubject: ${contact.subject}%0AMessage: ${contact.message}`
+    const url = `https://wa.me/${phone}?text=${text}`
+    window.open(url, "_blank")
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -537,30 +560,30 @@ export default function Portfolio() {
               </div>
             </div>
             <Card className="p-6">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleContactSubmit}>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">First Name</label>
-                    <Input placeholder="Name" />
+                    <Input name="firstName" placeholder="Name" value={contact.firstName} onChange={handleContactChange} />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Last Name</label>
-                    <Input placeholder="Last Name" />
+                    <Input name="lastName" placeholder="Last Name" value={contact.lastName} onChange={handleContactChange} />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Email</label>
-                  <Input type="email" placeholder="Email" />
+                  <Input name="email" type="email" placeholder="Email" value={contact.email} onChange={handleContactChange} />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Subject</label>
-                  <Input placeholder="Project Inquiry" />
+                  <Input name="subject" placeholder="Project Inquiry" value={contact.subject} onChange={handleContactChange} />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Message</label>
-                  <Textarea placeholder="Tell me about your project..." className="min-h-[120px]" />
+                  <Textarea name="message" placeholder="Tell me about your project..." className="min-h-[120px]" value={contact.message} onChange={handleContactChange} />
                 </div>
-                <Button className="w-full">
+                <Button className="w-full" type="submit">
                   Send Message <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </form>
