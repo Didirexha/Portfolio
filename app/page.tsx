@@ -439,7 +439,7 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                      <Globe className="h-6 w-6 text-primary-foreground" />
+                     <img src="Logo.jpg" alt="" /> 
                     </div>
                     <div>
                       <h4 className="font-semibold">Nexora Agency</h4>
