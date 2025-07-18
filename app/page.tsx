@@ -105,7 +105,7 @@ export default function Portfolio() {
       technologies: ["React", "Next.js", "Tailwind CSS", "Healthcare"],
       url: "https://poliklinikaa.netlify.app/",
       category: "Healthcare",
-      image: "poliklinika.jpg",
+      image: "klinika.jpg",
     },
     {
       name: "Carte du Jour Restaurant",
@@ -113,7 +113,7 @@ export default function Portfolio() {
       technologies: ["React", "JavaScript", "CSS3", "Restaurant"],
       url: "https://cartedujour.netlify.app/",
       category: "Restaurant",
-      image: "loungebar.png",
+      image: "lounge.jpg",
     },
     {
       name: "Programming Education Platform",
@@ -121,7 +121,7 @@ export default function Portfolio() {
       technologies: ["React", "JavaScript", "Education", "Interactive"],
       url: "https://programuesiiveturave.netlify.app/",
       category: "Education",
-      image: "programusiveturave.jpg",
+      image: "car.jpg",
     },
     {
       name: "GardenFix Landscaping",
@@ -129,7 +129,7 @@ export default function Portfolio() {
       technologies: ["React", "Next.js", "Tailwind CSS", "Business"],
       url: "https://gardenfix.netlify.app/",
       category: "Business",
-      image: "garden.jpg",
+      image: "green.jpg",
     },
     {
       name: "Nexora Agency",
