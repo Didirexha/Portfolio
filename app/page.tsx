@@ -232,7 +232,7 @@ export default function Portfolio() {
               <div className="relative">
                 <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20">
                   <Image
-                    src="didi.jpg"
+                    src="une.jpg"
                     alt="Didi Rexha"
                     width={320}
                     height={320}
