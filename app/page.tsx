@@ -66,7 +66,6 @@ export default function Portfolio() {
     { name: "React", level: 95, color: "bg-cyan-500" },
     { name: "Next.js", level: 90, color: "bg-black" },
     { name: "Node.js", level: 85, color: "bg-green-500" },
-    { name: "Python", level: 80, color: "bg-blue-600" },
     { name: "MongoDB", level: 85, color: "bg-green-600" },
     { name: "PostgreSQL", level: 80, color: "bg-blue-700" },
   ]
