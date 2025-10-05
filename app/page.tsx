@@ -32,7 +32,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "services", "projects", "agency", "contact"]
+      const sections = ["home", "about", "skills", "services", "projects", "contact"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -130,14 +130,6 @@ export default function Portfolio() {
       category: "Business",
       image: "green.jpg",
     },
-    {
-      name: "Nexora Agency",
-      description: "Digital agency website showcasing services, portfolio, and client testimonials",
-      technologies: ["React", "Next.js", "TypeScript", "Agency"],
-      url: "https://nexoragency.netlify.app/",
-      category: "Agency",
-      image: "nexora.jpg",
-    },
   ]
 
   // Add state for contact form
@@ -171,7 +163,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold">Didi Rexha</div>
             <div className="hidden md:flex items-center space-x-8">
-              {["Home", "About", "Skills", "Services", "Projects", "Agency", "Contact"].map((item) => (
+              {["Home", "About", "Skills", "Services", "Projects", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -198,7 +190,7 @@ export default function Portfolio() {
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
                   I create exceptional digital experiences through modern web technologies and innovative solutions.
-                  Founder of Nexora Agency, specializing in websites, CRM systems, and business automation.
+                  Specializing in websites, CRM systems, and business automation.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
@@ -283,11 +275,11 @@ export default function Portfolio() {
             <Card>
               <CardHeader>
                 <Briefcase className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Agency Founder</CardTitle>
+                <CardTitle>Business Solutions</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Founded Nexora Agency, providing comprehensive digital solutions to businesses globally.
+                  Providing comprehensive digital solutions and consulting to businesses globally.
                 </p>
               </CardContent>
             </Card>
@@ -416,83 +408,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Agency Section */}
-      <section id="agency" className="py-16 px-4 bg-muted/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nexora Agency</h2>
-            <p className="text-xl text-muted-foreground">Your partner in digital transformation and business growth</p>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Transforming Businesses Through Technology</h3>
-                <p className="text-muted-foreground">
-                  Nexora Agency specializes in creating cutting-edge digital solutions that drive business growth. From
-                  custom websites to complex CRM systems, we deliver excellence in every project.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-background rounded-lg">
-                  <div className="text-2xl font-bold text-primary">5+</div>
-                  <div className="text-sm text-muted-foreground">Clients Served</div>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg">
-                  <div className="text-2xl font-bold text-primary">10+</div>
-                  <div className="text-sm text-muted-foreground">Projects Completed</div>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg">
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg">
-                  <div className="text-2xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-muted-foreground">Support Available</div>
-                </div>
-              </div>
-              <Button asChild size="lg">
-                <Link href="https://nexoragency.netlify.app/">
-                  Visit Nexora Agency <ExternalLink className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="relative">
-              <Card className="p-6">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                     <img src="Logo.jpg" alt="" /> 
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Nexora Agency</h4>
-                      <p className="text-sm text-muted-foreground">Digital Solutions Provider</p>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Website Development</span>
-                      <Badge>Active</Badge>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">CRM Systems</span>
-                      <Badge>Active</Badge>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Business Automation</span>
-                      <Badge>Active</Badge>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm">Digital Consulting</span>
-                      <Badge>Active</Badge>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4">
@@ -602,12 +517,6 @@ export default function Portfolio() {
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 GitHub
-              </Link>
-              <Link
-                href="https://nexoragency.netlify.app/"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                Nexora Agency
               </Link>
               <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 LinkedIn
