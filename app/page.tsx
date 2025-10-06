@@ -253,7 +253,7 @@ export default function Portfolio() {
             <Card>
               <CardHeader>
                 <Award className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>4+ Years Experience</CardTitle>
+                <CardTitle>2+ Years Experience</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
